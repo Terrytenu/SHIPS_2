@@ -133,15 +133,14 @@
             }
             function ResizeCanvas(){
                 var unityCanvas_2 = document.querySelector("#unity-canvas");
-                var [width, height] = getRenderBufferSize(window.innerWidth, window.innerHeight);
-                unityCanvas_2.width = width;
-                unityCanvas_2.height = height;
+                unityCanvas_2.width = window.innerWidth;
+                unityCanvas_2.height = window.innerHeight;
                 console.log("canvas size changed");
             }
             window.addEventListener('resize', ResizeCanvas);
             window.addEventListener('orientationchange', ResizeCanvas);
-            console.log(window.getEventListeners("resize"));
-            console.log(window.getEventListeners("orientationchange"));
+            //console.log(window.getEventListeners("resize"));
+            //console.log(window.getEventListeners("orientationchange"));
             //Set Facing Mode here ('environment', 'user', '')
 		window.unityFacingMode = "environment"
             window.WEBCAM_SETTINGS = {
