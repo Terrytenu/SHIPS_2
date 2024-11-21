@@ -132,8 +132,9 @@
                 loadingBar.style.display = "block";
             }
             function ResizeCanvas(){
-                unityCanvas.style.width = window.innerWidth + "px";
-                unityCanvas.style.height = window.innerHeight + "px";
+                var unityCanvas_2 = document.querySelector("#unity-canvas");
+                unityCanvas_2.style.width = window.innerWidth + "px";
+                unityCanvas_2.style.height = window.innerHeight + "px";
                 console.log("canvas size changed");
             }
             window.addEventListener('resize', ResizeCanvas());
