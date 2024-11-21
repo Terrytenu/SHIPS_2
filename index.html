@@ -118,7 +118,7 @@
                     productName: "Ship",
                     productVersion: "0.1",
                     //webglContextAttributes: { "preserveDrawingBuffer": true },
-                    matchWebGLToCanvasSize: true, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+                    //matchWebGLToCanvasSize: true, // Uncomment this to separately control WebGL canvas render size and DOM element size.
                     // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
                     },
                     (progress) => {
@@ -132,9 +132,12 @@
                 loadingBar.style.display = "block";
             }
             function ResizeCanvas(){
+                //var container_2 = document.querySelector("#unity-container");
                 var unityCanvas_2 = document.querySelector("#unity-canvas");
-                unityCanvas_2.width = window.innerWidth;
-                unityCanvas_2.height = window.innerHeight;
+                unityCanvas_2.width = window.innerWidth + "px";
+                unityCanvas_2.height = window.innerHeight + "px";
+                console.log("width " + window.innerWidth);
+                console.log("height " + window.innerHeight);
                 console.log("canvas size changed");
             }
             window.addEventListener('resize', ResizeCanvas);
