@@ -131,12 +131,13 @@
                 });
                 loadingBar.style.display = "block";
             }
-            //function ResizeCanvas(){
-            //    canvas.style.width = window.innerWidth + "px";
-            //    canvas.style.height = window.innerHeight + "px";
-            //}
+            function ResizeCanvas(){
+                canvas.style.width = window.innerWidth + "px";
+                canvas.style.height = window.innerHeight + "px";
+                console.log("canvas size changed");
+            }
             //window.addEventListener('resize', ResizeCanvas());
-            //window.addEventListener('orientationchange', resizeCanvas);
+            window.addEventListener('orientationchange', ResizeCanvas(), false);
             //Set Facing Mode here ('environment', 'user', '')
 		window.unityFacingMode = "environment"
             window.WEBCAM_SETTINGS = {
