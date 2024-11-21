@@ -132,12 +132,12 @@
                 loadingBar.style.display = "block";
             }
             function ResizeCanvas(){
-                canvas.style.width = window.innerWidth + "px";
-                canvas.style.height = window.innerHeight + "px";
+                unityCanvas.style.width = window.innerWidth + "px";
+                unityCanvas.style.height = window.innerHeight + "px";
                 console.log("canvas size changed");
             }
-            //window.addEventListener('resize', ResizeCanvas());
-            window.addEventListener('orientationchange', ResizeCanvas(), false);
+            window.addEventListener('resize', ResizeCanvas());
+            window.addEventListener('orientationchange', ResizeCanvas());
             //Set Facing Mode here ('environment', 'user', '')
 		window.unityFacingMode = "environment"
             window.WEBCAM_SETTINGS = {
